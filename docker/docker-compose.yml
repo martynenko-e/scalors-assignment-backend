@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  scalorsassignmentbackend:
+    image: scalorsassignmentbackend
+    build:
+      context: ../.
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 8000:8000
