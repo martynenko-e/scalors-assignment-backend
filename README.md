@@ -1,3 +1,17 @@
+#### First run
+* copy `local_env` in docker folder to `.env`
+```
+cp ./docker/local_env ./docker/.env
+```
+* Run all containers
+```bash
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+```
+* Create superuser
+```bash
+docker exec -it scalorsassignmentbackend python manage.py createsuperuser 
+```
+
 # Backend Assignment: Simple Todos and Reminder API
 
 The assignment involves the creation of a TODO and Reminder REST JSON API using Django. Please use the following libraries and versions:

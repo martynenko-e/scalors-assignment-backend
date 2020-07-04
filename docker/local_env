@@ -1,0 +1,9 @@
+SECRET_KEY=+0em@dowy4(v&*ysn7)wor197=x@iyy&b*+a1je21pj6=co9o(
+ENVIRONMENT=dev
+APP_PORT=8000
+MYSQL_DATABASE=scalor
+MYSQL_USER=scaloruser
+MYSQL_PASSWORD=scalorpass
+MYSQL_HOST=scalor_db
+MYSQL_PORT=3306
+MYSQL_ROOT_PASSWORD=scalorroot
