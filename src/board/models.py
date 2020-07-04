@@ -18,6 +18,9 @@ class Board(ModelBaseUUID):
     def __str__(self):
         return self.name
 
+    def __repr__(self):
+        return f'Board(name={self.name})'
+
 
 class Todo(ModelBaseUUID):
     title = models.CharField(max_length=255)
@@ -28,3 +31,6 @@ class Todo(ModelBaseUUID):
 
     def __str__(self):
         return self.title
+
+    def __repr__(self):
+        return f'Todo(title={self.title}, board={self.board.id})'
