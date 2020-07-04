@@ -21,10 +21,10 @@ class Board(ModelBaseUUID):
 
 class Todo(ModelBaseUUID):
     title = models.CharField(max_length=255)
-    done = models.BooleanField(default=True)
+    done = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True, editable=False)
     updated = models.DateTimeField(auto_now=True, editable=False)
-    board = models.ForeignKey(Board, on_delete=models.CASCADE)
+    board = models.ForeignKey(Board, on_delete=models.CASCADE, related_name='todos')
 
     def __str__(self):
         return self.title
