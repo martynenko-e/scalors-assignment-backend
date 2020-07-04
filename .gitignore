@@ -1,1 +1,22 @@
 *.html
+env
+*.sqlite3
+
+### VScode template
+.vscode
+
+### macOS template
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+### Skip log files
+logs
+
+.env
