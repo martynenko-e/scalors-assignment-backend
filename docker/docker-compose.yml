@@ -17,6 +17,8 @@ services:
       MYSQL_HOST: ${MYSQL_HOST}
       MYSQL_PORT: ${MYSQL_PORT}
     container_name: scalorsassignmentbackend
+    depends_on: 
+      - scalor_db
   
   scalor_db: 
     image: mysql:5.7
