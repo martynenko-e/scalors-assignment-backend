@@ -96,6 +96,14 @@ DATABASES = {
     }
 }
 
+# Django rest configuration
+# https://www.django-rest-framework.org/api-guide/permissions/
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 

@@ -1,16 +1,31 @@
-#### First run
+# First run
+* Change working dir to `docker`
+```bash
+cd docker
+```
 * copy `local_env` in docker folder to `.env`
 ```
-cp ./docker/local_env ./docker/.env
+cp local_env .env
 ```
-* Run all containers
+* Up database container
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d scalor_db 
 ```
-* Create superuser
+* Up api container
+```bash
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d scalorsassignmentbackend 
+```
+* Create superuser (preferred `appuser:test`)
+* if username or password will be different please make sure that it also changed in postman env if needed
 ```bash
 docker exec -it scalorsassignmentbackend python manage.py createsuperuser 
 ```
+
+## POSTMAN COLLECTION FOR API
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1c3defbb51051ff040fa)
+
+* In order to user postman collection please import env from `scalors_todo.postman_environment.json`
+
 
 # Backend Assignment: Simple Todos and Reminder API
 
